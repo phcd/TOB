@@ -6,19 +6,25 @@ class Rest implements State {
 		if (inputValue == 1) {
 
 			wrapper.set_state(new Session());
-			System.out.println("   to session state");
+			System.out.println("in session state...");
 		}
 		if (inputValue == 2) {
 
 			wrapper.set_state(new Idle());
-			System.out.println("   to idle state");
+			System.out.println("in idle state...");
 		}
 		if (inputValue == 255) {
 			wrapper.set_state(new RestExtra());
 			//wrapper.tobTimer.schedule(wrapper.getTimerTask(), wrapper.config.getRestExtraTime());
-			System.out.println("Timeout from SessionExtra");
-			new SessionExtra().getUserInputForRestorSessionExtra(wrapper);
-			System.out.println("   to RestExtra state");
+			System.out.println("Timeout from Rest");
+			getUserInputForRest(wrapper);
 		}
+	}
+	public void getUserInputForRest(TransitionMachine wrapper) {
+		//user input
+		System.out.println("Do you wanna 1.) Start Session or 2.) end phase ");
+		
+		StateDemo.getUserInput(wrapper);
+		
 	}
 }

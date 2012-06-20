@@ -5,19 +5,20 @@ class Session implements State {
 		if (inputValue == 2) {
 
 			wrapper.set_state(new Idle());
-			System.out.println("   to idle state");
+			System.out.println("in idle state..");
 		}
 		if (inputValue == 3) {
 
 			wrapper.set_state(new Rest());
-			System.out.println("   to rest state");
+			System.out.println("in rest state..");
 		}
 
 		if (inputValue == 255) {
 			SessionExtra localSEObject = new SessionExtra();
+			System.out.println("in SessionExtra state");
 			wrapper.set_state(localSEObject);
-			localSEObject.getUserInputForRestorSessionExtra(wrapper);
-			System.out.println("from Session state");
+			localSEObject.getUserInputForSessionExtra(wrapper);
+			
 		}
 	}
 

@@ -11,14 +11,15 @@ import java.util.Scanner;
 public class StateDemo {
 	public static void main(String[] args) {
 		TransitionMachine machine = new TransitionMachine();
-		while (true) { //TODO remove after testing state transition
 		getUserInput(machine);
-		}
+//		while (true) { //TODO remove after testing state transition
+//		
+//		}
 
 	}
 
 	public static void getUserInput(TransitionMachine machine) {
-		
+			System.out.println("give input");
 			Scanner line = new Scanner(System.in);
 			String s = line.nextLine();
 			machine.transition(Integer.parseInt(s));

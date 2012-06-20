@@ -7,12 +7,13 @@ public class RestExtra implements State {
 		if (inputValue == 1) {
 
 			wrapper.set_state(new Session());
-			System.out.println("   to session state");
+			System.out.println("in session state...");
+			wrapper.tobTimer.schedule(wrapper.getTimerTask(), wrapper.config.getSessionTime());
 		}
 		if (inputValue == 2) {
 
 			wrapper.set_state(new Idle());
-			System.out.println("   to idle state");
+			System.out.println("in idle state...");
 		}
 
 	}
