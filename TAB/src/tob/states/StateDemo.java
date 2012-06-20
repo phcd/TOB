@@ -2,6 +2,12 @@ package tob.states;
 
 import java.util.Scanner;
 
+/**
+ * This is the main class to start the transition of states
+ * 
+ *   @author Dilip
+ *
+ */
 public class StateDemo {
 	public static void main(String[] args) {
 		TransitionMachine machine = new TransitionMachine();
